@@ -24,9 +24,7 @@ public class TimeBasedKVCacheImpl<K, V> implements TimeBasedKVCache<K, V> {
 
 	@Override
 	public void setElementsTimeToLive(long duration, TimeUnit timeunit) {
-		// The test will otherwise fail, because Windows's scheduler isn't
-		// accurate enough to sleep for 500 ms in the test method.
-		this.durationInNanos = timeunit.toNanos(duration - 20l); 
+		this.durationInNanos = timeunit.toNanos(duration); 
 	}
 
 	@Override
