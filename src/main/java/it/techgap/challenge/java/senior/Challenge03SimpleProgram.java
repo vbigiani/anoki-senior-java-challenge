@@ -3,6 +3,9 @@ package it.techgap.challenge.java.senior;
 import it.techgap.challenge.java.senior.beans.Employee;
 
 public class Challenge03SimpleProgram {
+	public static double SALESMAN_PERCENTAGE = 0.1;
+	
+	public static double MANAGER_PERCENTAGE = 0.005;
 
     /**
      * A Technician only gets his base salary each month
@@ -12,7 +15,7 @@ public class Challenge03SimpleProgram {
      * @return A well-built {@link Employee}
      */
     public static Employee getTechnician(String name, int startingSalary) {
-        return null;
+        return new Technician(startingSalary, name);
     }
 
     /**
@@ -24,7 +27,7 @@ public class Challenge03SimpleProgram {
      * @return A well-built {@link Employee}
      */
     public static Employee getSalesman(String name, int startingSalary, int monthlySales) {
-        return null;
+        return new Salesman(startingSalary, name, monthlySales);
     }
 
     /**
@@ -38,6 +41,6 @@ public class Challenge03SimpleProgram {
      * @return A well-built {@link Employee}
      */
     public static Employee getManager(String name, int startingSalary, Employee... directSubordinates) {
-        return null;
+        return new Manager(name, startingSalary, directSubordinates);
     }
 }
