@@ -7,7 +7,7 @@ public class Challenge02DesignPatterns {
      */
     public static class Singleton {
 
-        public static Singleton IN = new Singleton();
+        public static final Singleton IN = new Singleton();
 
         private Singleton() {
         }
